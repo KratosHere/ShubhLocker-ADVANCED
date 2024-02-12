@@ -610,45 +610,75 @@ def OTHERACCOUNT():
 
 
 
+def IMPORTANTDOCS():
+
+    print("< Welcome to your IMPORTANT DOCS LOCKER >\n")
+
+    def GmailPasswdDoc():
+
+        askAcc = input("Search the Account for getting its Documents:")
+
+        query = "select Gmail_Account from gmailacc where Gmail_Account like '{}%'".format(askAcc)
+        
+        myCursor.execute(query)
+
+        data = myCursor.fetchall()
+        
+        print(data)
+
+    GmailPasswdDoc()
+
+
+IMPORTANTDOCS()
+
+
+
+
+
+
+
+
+
+
 #MAIN_MENU_DRIVE
             
 
-while True:
+# while True:
 
 
-    print()
+#     print()
 
-    optionsLST = ['1-> GMAIL_ACCOUNT' , '2-> SOCIAL_MEDIA_ACCOUNT' , '3-> OTHER_ACCOUNTS' , '4-> EXIT']
+#     optionsLST = ['1-> GMAIL_ACCOUNT' , '2-> SOCIAL_MEDIA_ACCOUNT' , '3-> OTHER_ACCOUNTS' , '4-> EXIT']
 
-    for options in optionsLST:
-        print(options)
+#     for options in optionsLST:
+#         print(options)
 
-    print()
+#     print()
 
-    tableChoice = input('CHOOSE AND ACCESS THE TABLE:')
+#     tableChoice = input('CHOOSE AND ACCESS THE TABLE:')
 
 
-    if (tableChoice.isdigit()):
+#     if (tableChoice.isdigit()):
 
-        if (int(tableChoice) == 1):
+#         if (int(tableChoice) == 1):
 
-            GMAILACC()
+#             GMAILACC()
 
-        elif (int(tableChoice) == 2):
+#         elif (int(tableChoice) == 2):
 
-            SOCIALMEDIAACC()
+#             SOCIALMEDIAACC()
 
-        elif (int(tableChoice) == 3):
+#         elif (int(tableChoice) == 3):
 
-            OTHERACCOUNT()
+#             OTHERACCOUNT()
 
-        elif (int(tableChoice) == 4): #exit
+#         elif (int(tableChoice) == 4): #exit
 
-            print()
-            print('Program Closed Successfully!')
+#             print()
+#             print('Program Closed Successfully!')
     
-            break
+#             break
 
-    else:
-        print('Invalid Input, Try Again...!!')
-        break
+#     else:
+#         print('Invalid Input, Try Again...!!')
+#         break
