@@ -616,15 +616,47 @@ def IMPORTANTDOCS():
 
     def GmailPasswdDoc():
 
-        askAcc = input("Search the Account for getting its Documents:")
+        searchInput = input("Search the Account for getting its Documents:")
 
-        query = "select Gmail_Account from gmailacc where Gmail_Account like '{}%'".format(askAcc)
+        query = "select Gmail_Account from gmailacc where Gmail_Account like '{}%'".format(searchInput)
         
         myCursor.execute(query)
 
         data = myCursor.fetchall()
         
-        print(data)
+
+        for acc in range(len(data)):
+
+            print(acc,'->',list(data[acc]))
+
+        print()
+
+        askAcc = input("Enter the ACCOUNT's NUMBER for getting DOCUMENTS:")
+        
+        if (askAcc.isdigit()):
+
+            if (int(askAcc) == 0):
+
+                print(data[0])
+            
+            elif (int(askAcc) == 1):
+
+                print(data[1])
+
+            elif (int(askAcc) == 2):
+
+                print(data[2])
+
+            elif (int(askAcc) == 3):
+
+                print(data[3])
+
+        else:
+            print('Invalid Input')
+        
+
+
+
 
     GmailPasswdDoc()
 
