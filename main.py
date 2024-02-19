@@ -612,6 +612,7 @@ def OTHERACCOUNT():
 
 def IMPORTANTDOCS():
 
+    print()
     print("< Welcome to your IMPORTANT DOCS LOCKER >\n")
 
     def GmailPasswdDoc():
@@ -655,17 +656,37 @@ def IMPORTANTDOCS():
             print('Invalid Input')
         
 
+    #MenuDrive for IMPORTANTDOCS
+            
+
+    while True:
+
+        optionsLST = ['1-> Gmail Accounts Password' , '2-> EXIT']
+
+        for options in optionsLST:
+            print(options)
 
 
-
-    GmailPasswdDoc()
-
-
-IMPORTANTDOCS()
+        print()
+        ImpdocChoice = input('YOUR CHOICE:')
+        print()
 
 
+        if (ImpdocChoice.isdigit()):
 
+            if (int(ImpdocChoice) == 1):
 
+                GmailPasswdDoc()
+        
+
+            elif (int(ImpdocChoice) == 2): #exit
+
+                break
+        
+        else:
+
+            print("Invalid Input, Try Again!")
+            break
 
 
 
@@ -675,42 +696,48 @@ IMPORTANTDOCS()
 #MAIN_MENU_DRIVE
             
 
-# while True:
+while True:
 
 
-#     print()
+    print()
 
-#     optionsLST = ['1-> GMAIL_ACCOUNT' , '2-> SOCIAL_MEDIA_ACCOUNT' , '3-> OTHER_ACCOUNTS' , '4-> EXIT']
+    optionsLST = ['1-> GMAIL_ACCOUNT' , '2-> SOCIAL_MEDIA_ACCOUNT' , '3-> OTHER_ACCOUNTS' , '4-> ACCESS IMPORTANT DOCUMENTS' , '5-> EXIT']
 
-#     for options in optionsLST:
-#         print(options)
+    for options in optionsLST:
+        print(options)
 
-#     print()
+    print()
 
-#     tableChoice = input('CHOOSE AND ACCESS THE TABLE:')
+    tableChoice = input('CHOOSE AND ACCESS THE TABLE:')
 
 
-#     if (tableChoice.isdigit()):
+    if (tableChoice.isdigit()):
 
-#         if (int(tableChoice) == 1):
+        if (int(tableChoice) == 1):
 
-#             GMAILACC()
+            GMAILACC()
 
-#         elif (int(tableChoice) == 2):
+        elif (int(tableChoice) == 2):
 
-#             SOCIALMEDIAACC()
+            SOCIALMEDIAACC()
 
-#         elif (int(tableChoice) == 3):
+        elif (int(tableChoice) == 3):
 
-#             OTHERACCOUNT()
+            OTHERACCOUNT()
 
-#         elif (int(tableChoice) == 4): #exit
 
-#             print()
-#             print('Program Closed Successfully!')
+        elif (int(tableChoice) == 4):
+
+            IMPORTANTDOCS()
+
+
+        elif (int(tableChoice) == 5): #exit
+
+            print()
+            print('Program Closed Successfully!')
     
-#             break
+            break
 
-#     else:
-#         print('Invalid Input, Try Again...!!')
-#         break
+    else:
+        print('Invalid Input, Try Again...!!')
+        break
