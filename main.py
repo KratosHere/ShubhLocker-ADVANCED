@@ -640,14 +640,26 @@ def IMPORTANTDOCS():
 
 
 
-        # 0 -> ['accedge64@gmail.com']
-        # 1 -> ['accwin360@gmail.com']
-
+        
         print()
         
         selectAcc = input('Enter the Respective Number and Select Account for Accessing the Documents:')
         print()
         
+
+        # [['shubhashishchakraborty162@gmail.com'], ['otherpurposes31@gmail.com'], ['chakrabortyshubhashish6@gmail.com'], ['fromout9@gmail.com'], ['www.shubhashish1038@gmail.com'], ['runac76@gmail.com'], ['purposelappy@gmail.com'], ['studyonly1221@gmail.com'], ['kalikratos666@gmail.com'], ['winkratos93@gmail.com'], ['learnhardd@gmail.com'], ['my8317600@gmail.com'], ['accedge64@gmail.com'], ['onlystudyshubh00@gmail.com'], ['accwin360@gmail.com'], ['shubhashishpresent@gmail.com'], ['shubhashish147@gmail.com']]
+
+        #All Accounts In your Database
+        AllAccounts = []
+
+        myCursor.execute("select Gmail_Account from gmailacc")
+        data = myCursor.fetchall()
+
+        for i in data:
+            AllAccounts.append(list(i))
+
+
+        # acclist[i] ==> ['accwin360@gmail.com']
 
         if selectAcc.isdigit():
 
@@ -655,9 +667,15 @@ def IMPORTANTDOCS():
 
                 if (int(selectAcc) == i):
 
-                    print(accList[i])
+                    for x in range(len(AllAccounts)):
+
+                        if (accList[i][0] == AllAccounts[x][0]):
+
+                            print(accList[i] , AllAccounts[x])
+                            
                     
                 
+
                     
         else:
             print()
