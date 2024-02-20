@@ -610,6 +610,11 @@ def OTHERACCOUNT():
 
 
 
+
+#DOCUMENTS_MANAGEMENT_PROGRAMandFUNCTIONS
+
+
+
 def IMPORTANTDOCS():
 
     print()
@@ -617,43 +622,52 @@ def IMPORTANTDOCS():
 
     def GmailPasswdDoc():
 
-        searchInput = input("Search the Account for getting its Documents:")
-
-        query = "select Gmail_Account from gmailacc where Gmail_Account like '{}%'".format(searchInput)
-        
-        myCursor.execute(query)
-
-        data = myCursor.fetchall()
-        
-
-        for acc in range(len(data)):
-
-            print(acc,'->',list(data[acc]))
-
+        searchInput = input("Search the Account:")
         print()
 
-        askAcc = input("Enter the ACCOUNT's NUMBER for getting DOCUMENTS:")
+
+        query = "select Gmail_Account from gmailacc where Gmail_Account like '{}%'".format(searchInput)
+        myCursor.execute(query)
+
+        Accounts = myCursor.fetchall()
+
         
-        if (askAcc.isdigit()):
-
-            if (int(askAcc) == 0):
-
-                print(data[0])
+        accList = [] #will become a nested list [ [],[]...]
+        for account in range(len(Accounts)):
             
-            elif (int(askAcc) == 1):
+            print(account,'->',list(Accounts[account]))
+            accList.append(list(Accounts[account]))
 
-                print(data[1])
 
-            elif (int(askAcc) == 2):
 
-                print(data[2])
+        # 0 -> ['accedge64@gmail.com']
+        # 1 -> ['accwin360@gmail.com']
 
-            elif (int(askAcc) == 3):
+        print()
+        
+        selectAcc = input('Enter the Respective Number and Select Account for Accessing the Documents:')
+        print()
+        
 
-                print(data[3])
+        if selectAcc.isdigit():
 
+            for i in range(len(accList)):
+
+                if (int(selectAcc) == i):
+
+                    print(accList[i])
+                    
+                
+                    
         else:
-            print('Invalid Input')
+            print()
+            print("Invalid Input, Try Again!")
+            
+            
+        print()
+        
+
+        
         
 
     #MenuDrive for IMPORTANTDOCS
@@ -687,6 +701,7 @@ def IMPORTANTDOCS():
 
             print("Invalid Input, Try Again!")
             break
+
 
 
 
