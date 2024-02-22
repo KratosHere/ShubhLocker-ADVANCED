@@ -735,10 +735,17 @@ def IMPORTANTDOCS():
 
                         if (accList[i][0] == AllAccounts[x][0]):
 
-                            print(accList[i] , AllAccounts[x])
+                            if (AllAccounts[x][0] == "www.shubhashish1038@gmail.com"):
+
+                                print("Here's your DOCUMENT=> https://drive.google.com/file/d/1RACtAEXSjz9woV_gkEOTyFvwgLsLh2jM/view?usp=drive_link")
                             
-                    
-                
+                            elif (AllAccounts[x][0] == "runac76@gmail.com"):
+                                
+                                print("Here's your DOCUMENT=> https://drive.google.com/file/d/1ZzTvVTDMScVMaa-fxd5MlQqLt4JuXR1E/view?usp=drive_link")
+
+                            #CONTINUE
+                            else:
+                                print('Sorry Currently Data Not Available!')
 
                     
         else:
