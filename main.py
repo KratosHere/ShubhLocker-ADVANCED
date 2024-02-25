@@ -712,9 +712,11 @@ def IMPORTANTDOCS():
         
 
         
+        AllAccounts = []
+        AllPasswords = []
+
 
         #All Accounts In your Database
-        AllAccounts = []
 
         myCursor.execute("select Gmail_Account from gmailacc")
         data = myCursor.fetchall()
@@ -722,6 +724,13 @@ def IMPORTANTDOCS():
         for i in data:
             AllAccounts.append(list(i))
 
+        #All Account's Password In your Database
+
+        myCursor.execute("select Password from gmailacc")
+        Passdata = myCursor.fetchall()
+
+        for a in Passdata:
+            AllPasswords.append(list(a))
 
 
         if selectAcc.isdigit():
@@ -736,11 +745,29 @@ def IMPORTANTDOCS():
 
                             if (AllAccounts[x][0] == "www.shubhashish1038@gmail.com"):
 
-                                print("Here's your DOCUMENT=> https://drive.google.com/file/d/1RACtAEXSjz9woV_gkEOTyFvwgLsLh2jM/view?usp=drive_link")
+                                
+                                askPasswd = input('Enter Password for the Account:')
+                                print()
+                                for CheckPass in range(len(AllPasswords)):
+
+                                    if (askPasswd == AllPasswords[CheckPass][0]):
+                                        
+                                        print("Here's your DOCUMENT=> https://drive.google.com/file/d/1RACtAEXSjz9woV_gkEOTyFvwgLsLh2jM/view?usp=drive_link")
+
+
                             
                             elif (AllAccounts[x][0] == "runac76@gmail.com"):
+
+                                askPasswd = input("Enter Password for the Account:")
+
+                                for CheckPass in range(len(AllPasswords)):
+
+                                    if (askPasswd == AllPasswords[CheckPass][0]):
+
+                                        print("Here's your DOCUMENT=> https://drive.google.com/file/d/1ZzTvVTDMScVMaa-fxd5MlQqLt4JuXR1E/view?usp=drive_link")
+
+
                                 
-                                print("Here's your DOCUMENT=> https://drive.google.com/file/d/1ZzTvVTDMScVMaa-fxd5MlQqLt4JuXR1E/view?usp=drive_link")
 
                             #CONTINUE
                             else:
