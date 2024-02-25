@@ -711,7 +711,7 @@ def IMPORTANTDOCS():
         print()
         
 
-        # [['shubhashishchakraborty162@gmail.com'], ['otherpurposes31@gmail.com'], ['chakrabortyshubhashish6@gmail.com'], ['fromout9@gmail.com'], ['www.shubhashish1038@gmail.com'], ['runac76@gmail.com'], ['purposelappy@gmail.com'], ['studyonly1221@gmail.com'], ['kalikratos666@gmail.com'], ['winkratos93@gmail.com'], ['learnhardd@gmail.com'], ['my8317600@gmail.com'], ['accedge64@gmail.com'], ['onlystudyshubh00@gmail.com'], ['accwin360@gmail.com'], ['shubhashishpresent@gmail.com'], ['shubhashish147@gmail.com']]
+        
 
         #All Accounts In your Database
         AllAccounts = []
@@ -723,7 +723,6 @@ def IMPORTANTDOCS():
             AllAccounts.append(list(i))
 
 
-        # acclist[i] ==> ['accwin360@gmail.com']
 
         if selectAcc.isdigit():
 
