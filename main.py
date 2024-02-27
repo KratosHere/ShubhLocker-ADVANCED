@@ -741,7 +741,8 @@ def IMPORTANTDOCS():
 
                                     if (askPasswd == AllPasswords[CheckPass][0]):
                                         
-                                        print("Here's your DOCUMENT=> https://drive.google.com/file/d/1RACtAEXSjz9woV_gkEOTyFvwgLsLh2jM/view?usp=drive_link")
+                                        
+                                        os.system('start https://drive.google.com/file/d/1RACtAEXSjz9woV_gkEOTyFvwgLsLh2jM/view?usp=drive_link')
 
 
                             
@@ -753,7 +754,7 @@ def IMPORTANTDOCS():
 
                                     if (askPasswd == AllPasswords[CheckPass][0]):
 
-                                        print("Here's your DOCUMENT=> https://drive.google.com/file/d/1ZzTvVTDMScVMaa-fxd5MlQqLt4JuXR1E/view?usp=drive_link")
+                                        os.system('start https://drive.google.com/file/d/1ZzTvVTDMScVMaa-fxd5MlQqLt4JuXR1E/view?usp=drive_link')
 
 
                                 
