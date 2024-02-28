@@ -749,6 +749,7 @@ def IMPORTANTDOCS():
                             elif (AllAccounts[x][0] == "runac76@gmail.com"):
 
                                 askPasswd = input("Enter Password for the Account:")
+                                print()
 
                                 for CheckPass in range(len(AllPasswords)):
 
@@ -760,6 +761,7 @@ def IMPORTANTDOCS():
                             elif (AllAccounts[x][0] == "fromout9@gmail.com"):
 
                                 askPasswd = input("Enter Pasword for the Account:")
+                                print()
 
                                 for CheckPass in range(len(AllPasswords)):
 
@@ -767,6 +769,17 @@ def IMPORTANTDOCS():
 
                                         os.system("start https://drive.google.com/file/d/1dQt2hdR6G2IjOn2dCILfca5Kd7fVDwL8/view?usp=drive_link")
 
+                            elif (AllAccounts[x][0] == "onlystudyshubh00@gmail.com"):
+
+                                askPasswd = input("Enter Pasword for the Account:")
+                                print()
+                                
+                                for CheckPass in range(len(AllPasswords)):
+
+                                    if (askPasswd == AllPasswords[CheckPass][0]):
+
+                                        os.system("start https://drive.google.com/file/d/1F3SChXX_OT_PLJEhiDChUMC0wagzUd0I/view?usp=drive_link")
+                            
 
                                 
 
