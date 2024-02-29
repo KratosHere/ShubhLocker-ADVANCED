@@ -796,7 +796,113 @@ def IMPORTANTDOCS():
         print()
         
 
+
+    def SocialDOCS():
+
+        searchInput = input("Search the Account:")
+        print()
+
+
+        query = "select Social_Account from socialmediaacc where Social_Account like '{}%'".format(searchInput)
+        myCursor.execute(query)
+
+        Accounts = myCursor.fetchall()
+
         
+        accList = [] #will become a nested list [ [],[]...]
+        for account in range(len(Accounts)):
+            
+            print(account,'->',list(Accounts[account]))
+            accList.append(list(Accounts[account]))
+
+
+
+        
+        print()
+        
+        selectAcc = input('Enter the Respective Number and Select Account for Accessing the Documents:')
+        print()
+        
+
+        AllAccounts = []
+        AllPasswords = []
+
+
+        #All Accounts In your Database
+
+        myCursor.execute("select Social_Account from socialmediaacc")
+        data = myCursor.fetchall()
+
+        for i in data:
+            AllAccounts.append(list(i))
+
+        #All Account's Password In your Database
+
+        myCursor.execute("select Password from socialmediaacc")
+        Passdata = myCursor.fetchall()
+
+        for a in Passdata:
+            AllPasswords.append(list(a))
+
+        
+        if selectAcc.isdigit():
+
+            for i in range(len(accList)):
+
+                if (int(selectAcc) == i):
+
+                    for x in range(len(AllAccounts)):
+
+                        if (accList[i][0] == AllAccounts[x][0]):
+
+                            if (AllAccounts[x][0] == "FACEBOOK - Runa Shankar"):
+
+                                
+                                askPasswd = input('Enter Password for the Account:')
+                                print()
+                                for CheckPass in range(len(AllPasswords)):
+
+                                    if (askPasswd == AllPasswords[CheckPass][0]):
+                                        
+                                        
+                                        os.system("start https://drive.google.com/file/d/12Qmy6AfbqhjrI9lRh9vbuipUIxISby5t/view?usp=drive_link") #DOC1
+                                        os.system("start https://drive.google.com/file/d/1zMH_3e7d2FFOxTcTP4oPIibu8NH5abzS/view?usp=drive_link") #DOC2
+
+
+
+                                
+                            elif (AllAccounts[x][0] == "SNAPCHAT - agent_69(something)"):
+
+                                askPasswd = input("Enter Password for the Account:")
+                                print()
+
+                                for CheckPass in range(len(AllPasswords)):
+
+                                    if (askPasswd == AllPasswords[CheckPass][0]):
+
+                                        os.system("start https://drive.google.com/file/d/1zDrJFKp4nD5lZlZi4tabIOan1MwtBznX/view?usp=drive_link")
+                            
+
+                            
+                            
+
+                                
+
+                            #CONTINUE
+                            else:
+                                print('Sorry Currently Data Not Available!')
+
+                    
+        else:
+            print()
+            print("Invalid Input, Try Again!")
+            
+            
+        print()
+
+
+
+
         
 
     #MenuDrive for IMPORTANTDOCS
@@ -804,7 +910,7 @@ def IMPORTANTDOCS():
 
     while True:
 
-        optionsLST = ['1-> Gmail Accounts Password' , '2-> EXIT']
+        optionsLST = ['1-> Gmail Accounts Documents' , '2-> Social Media Documents' , '3-> EXIT']
 
         for options in optionsLST:
             print(options)
@@ -820,9 +926,12 @@ def IMPORTANTDOCS():
             if (int(ImpdocChoice) == 1):
 
                 GmailPasswdDoc()
-        
+            
+            elif (int(ImpdocChoice) == 2):
 
-            elif (int(ImpdocChoice) == 2): #exit
+                SocialDOCS()
+
+            elif (int(ImpdocChoice) == 3): #exit
 
                 os.system('cls')
                 break
