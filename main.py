@@ -760,7 +760,7 @@ def IMPORTANTDOCS():
 
                             elif (AllAccounts[x][0] == "fromout9@gmail.com"):
 
-                                askPasswd = input("Enter Pasword for the Account:")
+                                askPasswd = input("Enter Password for the Account:")
                                 print()
 
                                 for CheckPass in range(len(AllPasswords)):
@@ -771,7 +771,7 @@ def IMPORTANTDOCS():
 
                             elif (AllAccounts[x][0] == "onlystudyshubh00@gmail.com"):
 
-                                askPasswd = input("Enter Pasword for the Account:")
+                                askPasswd = input("Enter Password for the Account:")
                                 print()
                                 
                                 for CheckPass in range(len(AllPasswords)):
@@ -781,7 +781,27 @@ def IMPORTANTDOCS():
                                         os.system("start https://drive.google.com/file/d/1F3SChXX_OT_PLJEhiDChUMC0wagzUd0I/view?usp=drive_link")
                             
 
-                                
+                            elif (AllAccounts[x][0] == "purposelappy@gmail.com"):
+
+                                askPasswd = input("Enter Password for the Account:")
+                                print()
+
+                                for CheckPass in range(len(AllPasswords)):
+
+                                    if (askPasswd == AllPasswords[CheckPass][0]):
+
+                                        os.system("start https://drive.google.com/file/d/1D4Ty3FUsGAJbmO2iNyw27r5RHMq1qriU/view?usp=drive_link") #DOC1
+                                        os.system("start https://drive.google.com/file/d/1U2p0_FYAH7-iDshaXAOCpULE8rOxOUIM/view?usp=drive_link") #DOC2
+                                        os.system("start https://drive.google.com/file/d/1PniKoVdL7QGYnmyrXyEnESkD7zx4UlJO/view?usp=drive_link") #DOC3
+
+
+
+
+
+
+
+
+
 
                             #CONTINUE
                             else:
@@ -882,6 +902,21 @@ def IMPORTANTDOCS():
 
                                         os.system("start https://drive.google.com/file/d/1zDrJFKp4nD5lZlZi4tabIOan1MwtBznX/view?usp=drive_link")
                             
+
+                            elif (AllAccounts[x][0] == "TWITTER - KRATOS_boi_"):
+
+                                askPasswd = input("Enter Password for the Account:")
+                                print()
+
+                                for CheckPass in range(len(AllPasswords)):
+
+                                    if (askPasswd == AllPasswords[CheckPass][0]):
+
+                                        os.system("start https://drive.google.com/file/d/1drjAFfLaMJ7tSt_PxrjJZN0QKn8HDY40/view?usp=drive_link") #DOC1
+                                        os.system("start https://drive.google.com/file/d/1Q5mlACb2BucVn6YHmyXdwIrPsEZHDCJa/view?usp=drive_link") #DOC2
+                                        os.system("start https://drive.google.com/file/d/168-euF5rrH07xCJR5VGj3CdlMowd01Pa/view?usp=drive_link") #DOC3
+                                        os.system("start https://drive.google.com/file/d/1R_5I8yLPTk-ZCSbGTE4rz1pBHaEFE5NJ/view?usp=drive_link") #DOC4
+                                        os.system("start https://drive.google.com/file/d/1jnDDfhRu6wx3gPf75GFlUW-myjVqJU80/view?usp=drive_link") #DOC5
 
                             
                             
