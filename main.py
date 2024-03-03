@@ -3,6 +3,14 @@
 import mysql.connector as mysqlconnector
 import os
 
+from win32com.client import Dispatch
+
+def speak(str):
+    speak = Dispatch(('SAPI.SpVoice'))
+    speak.Speak(str)
+
+
+
 
 MYpasswd = input('Enter Your MySQL Password:')
 
@@ -16,8 +24,13 @@ myCursor = myConnection.cursor()
 
 def GMAILACC():
 
+    
     print()
     print('< Welcome to your GMAIL ACCOUNT MANAGEMENT DATABASE >\n')
+
+
+    if __name__ == '__main__':
+        speak('Welcome to your GMAIL ACCOUNT MANAGEMENT DATABASE')
 
 
     def insertData():  
@@ -239,6 +252,9 @@ def SOCIALMEDIAACC():
     print()
     print('< Welcome to your SOCIAL MEDIA ACCOUNT MANAGEMENT DATABASE >\n')
 
+    if __name__ == '__main__':
+        speak('Welcome to your SOCIAL MEDIA ACCOUNT MANAGEMENT DATABASE')
+
 
     def insertData():
 
@@ -453,6 +469,9 @@ def OTHERACCOUNT():
 
     print()
     print('< Welcome to your OTHER IMPORTANT ACCOUNTS MANAGEMENT DATABASE >\n')
+
+    if __name__ == '__main__':
+        speak('Welcome to your OTHER IMPORTANT ACCOUNTS MANAGEMENT DATABASE')
 
 
     def insertData():
@@ -672,6 +691,10 @@ def IMPORTANTDOCS():
 
     print()
     print("< Welcome to your IMPORTANT DOCS LOCKER >\n")
+
+
+    if __name__ == '__main__':
+        speak('Welcome to your IMPORTANT DOCS LOCKER')
 
     def GmailPasswdDoc():
 
